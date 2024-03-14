@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AulaVirtualController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,11 @@ Route::controller(EstudianteController::class)->group(function () {
     Route::get('/inscripcion', [EstudianteController::class, 'preInscripcion'])->name('pages.preinscripcion');
     Route::get('/nosotros', [EstudianteController::class, 'nosotros'])->name('pages.nosotros');
 });
+
+Route::controller(AulaVirtualController::class)->group(function () {
+    Route::get('/aula', [AulaVirtualController::class, 'aulaVirtual'])->name('aula-virtual.home');
+});
+
 
 Route::controller(LoginController::class)->group(function () {
 

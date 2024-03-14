@@ -75,6 +75,7 @@
             border: none;
             font-size: 18px;
             color: #443386;
+            cursor: pointer;
         }
     </style>
 </head>
